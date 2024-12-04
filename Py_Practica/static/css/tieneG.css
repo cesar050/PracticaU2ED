@@ -1,0 +1,93 @@
+/* Definimos colores reutilizables como variables */
+:root {
+    --primary-color: #4A90E2; /* Azul Suave */
+    --secondary-color: #FFC857; /* Amarillo Brillante */
+    --neutral-light: #F5F5F5; /* Gris Pálido */
+    --neutral-dark: #333333; /* Gris Profundo */
+    --accent-color: #7EB77F; /* Verde Suave */
+    --background-overlay: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--neutral-light); /* Texto claro sobre fondo oscuro */
+}
+
+.navbar {
+    justify-content: center;
+    background-color: rgba(103, 162, 177, 0.8); /* Fondo semitransparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: var(--neutral-dark); /* Color de enlaces de navegación */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color); /* Amarillo Brillante al pasar el mouse */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Centrado vertical */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+    color: var(--primary-color); /* Azul Suave */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid var(--primary-color); /* Borde azul */
+}
+
+footer {
+    text-align: center;
+    background-color: var(--background-overlay); /* Fondo translúcido */
+    color: var(--neutral-light); /* Texto claro */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+button {
+    background-color: var(--primary-color); /* Fondo azul */
+    color: var(--neutral-light); /* Texto claro */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-color); /* Verde Suave al pasar el mouse */
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3f81;
+    border-radius: 12px;
+    border: 3px solid #121212;
+}

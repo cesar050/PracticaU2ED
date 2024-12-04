@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Generador</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Eliminar Generador</h1>
+
+        <p>¿Estás seguro de que deseas eliminar el generador con ID {{ generador.id }}?</p>
+        <ul>
+            <li><strong>Precio:</strong> {{ generador.precio }}</li>
+            <li><strong>Consumo por Hora:</strong> {{ generador.consumoPorHora }}</li>
+            <li><strong>Energía Generada:</strong> {{ generador.energiaGenerada }}</li>
+            <li><strong>Uso:</strong> {{ generador.uso }}</li>
+        </ul>
+
+        <!-- URL dinámico y método POST -->
+        <form method="post" action="{{ url_for('route_generador.delete_generador', id=generador.id) }}" onsubmit="return confirm('¿Seguro que deseas eliminar este generador?');">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{{ url_for('route_generador.home') }}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

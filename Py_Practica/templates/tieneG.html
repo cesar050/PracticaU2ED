@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familias con Generador</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tieneG.css') }}">
+
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-primary">Familias con Generador</h1>
+
+        <!-- Tabla con la lista de familias -->
+        <table class="table table-bordered bg-light text-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Presupuesto</th>
+                    <th>Tiene Generador</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for familia in data %}
+                    <tr>
+                        <td>{{ familia.id }}</td>
+                        <td>{{ familia.nombre }}</td>
+                        <td>${{ familia.presupuesto }}</td>
+                        <td>
+                            {% if familia.tieneGenerador %}
+                                Sí
+                            {% else %}
+                                No
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/" class="btn btn-secondary">Volver</a>
+    </div>
+</body>
+</html>

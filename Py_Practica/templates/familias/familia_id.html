@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/image/gen.png" rel="icon">
+    <title>Detalles de la Familia</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalle.css') }}"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function url_change() {
+                var url = "http://127.0.0.1:5000/generador/list/search";
+                var busqueda = $("#busqueda").val();
+                var atributo = $("#atributo").val();
+                var new_url = url + "/" + atributo + "/" + busqueda;
+                $("#boton").attr("href", new_url);
+            }
+        
+            $("#busqueda").keyup(function () {
+                url_change();
+            });
+            $("#atributo").change(function () {
+                url_change();
+            });
+        
+            function updateArrowUrls() {
+                var method = $("#ordenar").val(); 
+            
+                $("a.text-primary").each(function () {
+                    var baseUrl = $(this).data("original-href"); 
+                    $(this).attr("href", baseUrl + method);
+                });
+            }
+            
+            $("a.text-primary").each(function () {
+                if (!$(this).data("original-href")) {
+                    $(this).data("original-href", $(this).attr("href")); 
+                }
+            });
+            
+            $("#ordenar").change(function () {
+                updateArrowUrls();
+            });
+            
+            updateArrowUrls();
+            });
+    </script>
+
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Detalles de la Familia</h1>
+
+        <!-- Mostrar información de la familia si está disponible -->
+        {% if familia %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Información de la Familia</h5>
+                <p><strong>Nombre:</strong> {{ familia['nombre'] }}</p>
+                <p><strong>ID:</strong> {{ familia['id'] }}</p>
+                <p><strong>Presupuesto:</strong> ${{ familia['presupuesto'] }}</p>
+                <p><strong>Tiene Generador:</strong> {{ 'Sí' if familia['tieneGenerador'] else 'No' }}</p>
+                <a href="/familia" class="btn btn-info" type="submit">Regresar</a>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Mostrar generadores accesibles si están disponibles -->
+        {% if disponibles %}
+        <h2>Generadores Accesibles</h2>
+        <div class="d-flex align-items-center gap-2">
+            <label for="ordenar" class="mr-2">Elige un metodo</label>
+            <select id="ordenar" class="form-select w-auto">
+                <option value="shell">Metodo Shell</option>
+                <option value="merge">Metodo Merge</option>
+                <option value="quick">Metodo Quick</option>
+            </select>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+
+                    <th class="text-center" style="max-width: 125px; font-size: 0.9em;">
+                        <div>
+                            <i class="fas fa-money-bill-wave"></i> Precio
+                        </div>
+                        <div>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='precio', type=1, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-up"></i>
+                            </a>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='precio', type=0, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </th>
+
+                    <th class="text-center" style="max-width: 125px; font-size: 0.9em;">
+                        <div>
+                            <i class="fas fa-gas-pump"></i> Consumo por hora
+                        </div>
+                        <div>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='consumoPorHora', type=1, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-up"></i>
+                            </a>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='consumoPorHora', type=0, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </th>
+
+                    <th class="text-center" style="max-width: 125px; font-size: 0.9em;">
+                        <div>
+                            <i class="fas fa-bolt"></i> Energia generada
+                        </div>
+                        <div>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='energiaGenerada', type=1, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-up"></i>
+                            </a>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='energiaGenerada', type=0, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </th>
+
+                    <th class="text-center" style="max-width: 125px; font-size: 0.9em;">
+                        <div>
+                            <i class="fas fa-cogs"></i> Uso
+                        </div>
+                        <div>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='uso', type=1, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-up"></i>
+                            </a>
+                            <a href="{{ url_for('route_generador.metodosOrdenacion', attribute='uso', type=0, metodo='') }}" class="text-primary mx-1">
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for generador in disponibles %}
+                <tr>
+                    <td>${{ generador['precio'] }}</td>
+                    <td>{{ generador['consumoPorHora'] }} kWh</td>
+                    <td>{{ generador['energiaGenerada'] }} kWh</td>
+                    <td>{{ generador['uso'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>

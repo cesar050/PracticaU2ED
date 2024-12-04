@@ -1,0 +1,61 @@
+body {
+    background-image: url('/static/image/fondoagregar.jpeg'); /* Cambia a la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333333;
+
+    
+    ::-webkit-scrollbar{
+        width: 18px;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background: #121212;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background: #ff3f81;
+        border-radius: 12px;
+        border: 3px solid #121212;
+    }
+     /* Color de texto oscuro para contraste */
+}
+
+h1.text-electricity {
+    color: #ff8c00; /* Naranja cálido para destacar */
+    text-shadow: 2px 2px #000000; /* Sombra negra para resaltar */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.form-control {
+    border: 2px solid #ff4500; /* Borde naranja */
+}
+
+.form-control:focus {
+    border-color: #32cd32; /* Verde lima al enfocar */
+    box-shadow: 0 0 5px rgba(50, 205, 50, 0.5); /* Sombra verde */
+}
+
+.btn-success {
+    background-color: #32cd32; /* Verde lima */
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #808080; /* Gris */
+    border: none;
+}
+
+.btn-success:hover, .btn-secondary:hover {
+    opacity: 0.9; /* Efecto de opacidad */
+    transform: scale(1.05); /* Animación de escala */
+    transition: all 0.3s ease-in-out;
+}
+
+.alert {
+    background-color: #ffcccb; /* Fondo rojo claro */
+    color: #333333; /* Texto oscuro */
+    border-radius: 15px;
+    border: 1px solid #dc143c; /* Borde rojo carmesí */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIstorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}"> <!-- Enlace a tu CSS -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-electricity">HIstorial</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-warning" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> {{ messages[0] }}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% if lista and lista|length > 0 %}
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered animate__animated animate__fadeIn">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th><i class="fas fa-id-badge"></i> ID</th>
+                            <th><i class="fas fa-user"></i> Tipo</th>
+                            <th><i class="fas fa-bi-messenger"></i> Mensaje</th>
+                            <th><i class="fas fa-check-circle"></i> Fecha</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in lista %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.tipo }}</td>
+                            <td>{{ item.mensaje }}</td>
+                            <td>{{ item.horaFehca }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                <i class="fas fa-info-circle"></i> No hay registros de HIstorial.
+            </div>
+        {% endif %}
+    </div>
+        <a href="/" class="btn btn-secondary"><i class="fas fa-arrow-circle-left"></i> Volver</a>
+
+</body>

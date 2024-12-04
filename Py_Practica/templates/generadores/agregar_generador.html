@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Generador</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='agregar_generador.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mt-4">Agregar Nuevo Generador <i class="fas fa-plus-circle"></i></h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert alert-danger" role="alert">
+                    {% for category, message in messages %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="post" action="{{ url_for('route_generador.save_generador') }}">
+            <div class="form-group">
+                <label for="precio">Precio <i class="fas fa-dollar-sign"></i>:</label>
+                <input type="number" class="form-control" id="precio" name="precio" step="0.01" required aria-label="Precio del generador">
+            </div>
+            <div class="form-group">
+                <label for="consumoPorHora">Consumo por Hora <i class="fas fa-bolt"></i>:</label>
+                <input type="number" class="form-control" id="consumoPorHora" name="consumoPorHora" step="0.01" required aria-label="Consumo por hora del generador">
+            </div>
+            <div class="form-group">
+                <label for="energiaGenerada">Energía Generada <i class="fas fa-solar-panel"></i>:</label>
+                <input type="number" class="form-control" id="energiaGenerada" name="energiaGenerada" step="0.01" required aria-label="Energía generada por el generador">
+            </div>
+            <div class="form-group">
+                <label for="uso">Uso del Generador <i class="fas fa-tools"></i>:</label>
+                <input type="text" class="form-control" id="uso" name="uso" aria-label="Uso del generador">
+            </div>
+
+            <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Agregar</button>
+            <a href="{{ url_for('route_generador.home') }}" class="btn btn-secondary"><i class="fas fa-times"></i> Cancelar</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

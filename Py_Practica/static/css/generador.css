@@ -1,0 +1,68 @@
+body {
+    /* Cambia a la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333333; /* Color de texto oscuro para contraste */
+}
+
+h1.text-electricity {
+    color: #ff8c00; /* Naranja cálido para destacar */
+    text-shadow: 2px 2px #000000; /* Sombra negra para resaltar */
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: #333333; /* Texto oscuro */
+    border: 1px solid #ff8c00; /* Borde naranja */
+}
+
+.table thead {
+    background-color: #ff4500; /* Naranja rojizo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+.table tbody tr:hover {
+    background-color: #ffe4b5; /* Amarillo claro */
+}
+
+.table th, .table td {
+    text-align: center; /* Centrar texto en las celdas */
+    padding: 15px;
+}
+
+.btn-success {
+    background-color: #32cd32; /* Verde lima */
+    border: none;
+}
+
+.btn-primary {
+    background-color: #1e90ff; /* Azul Dodger */
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc143c; /* Rojo carmesí */
+    border: none;
+}
+
+.btn-success:hover, .btn-primary:hover, .btn-danger:hover {
+    opacity: 0.9; /* Efecto de opacidad */
+    transform: scale(1.05); /* Animación de escala */
+    transition: all 0.3s ease-in-out;
+}
+
+.alert {
+    background-color: #ffcccb; /* Fondo rojo claro */
+    color: #333333; /* Texto oscuro */
+    border-radius: 15px;
+    border: 1px solid #dc143c; /* Borde rojo carmesí */
+}
+
+.table-responsive {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar la tabla */
+}
+
+.animate__animated.animate__fadeIn {
+    animation-duration: 1s;
+}

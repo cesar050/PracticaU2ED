@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Familia</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 text-danger">Eliminar Familia</h1>
+        <p>¿Estás seguro de que deseas eliminar la familia <strong>{{ familia.nombre }}</strong>?</p>
+        <form method="post" action="{{ url_for('route_familia.delete_familia', id=familia.id) }}">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{{ url_for('route_familia.home') }}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

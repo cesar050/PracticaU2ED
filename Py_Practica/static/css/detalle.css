@@ -1,0 +1,92 @@
+/* Variables de colores */
+:root {
+    --text-color: #ffffff; /* Texto blanco */
+    --header-bg: #333333; /* Fondo oscuro del encabezado */
+    --row-bg-light: #f9f9f9; /* Fondo claro para filas */
+    --row-bg-dark: #e0e0e0; /* Fondo alternado para filas */
+    --row-hover: #ffe4b5; /* Hover sobre filas */
+    --btn-primary-bg: #007bff; /* Botón azul */
+    --btn-danger-bg: #dc3545; /* Botón rojo */
+}
+
+/* Estilos de tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid var(--header-bg);
+}
+
+.table thead {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+.table thead th {
+    padding: 10px;
+    border: 1px solid #444;
+    position: relative;
+}
+
+.table thead th i {
+    margin-left: 5px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: var(--row-bg-light);
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: var(--row-bg-dark);
+}
+
+.table tbody tr:hover {
+    background-color: var(--row-hover);
+    cursor: pointer;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.btn-danger {
+    background-color: var(--btn-danger-bg);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Responsividad */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

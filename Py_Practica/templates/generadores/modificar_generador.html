@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificar Generador</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Modificar Generador</h1>
+
+        <form method="POST" action="/generador/{{ generador.id }}/update">
+            <div class="form-group">
+                <input type="hidden" name = "_method" value="PUT">
+                <label for="precio">Precio:</label>
+                <input type="number" class="form-control" id="precio" name="precio" value="{{ generador.precio }}" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="consumoPorHora">Consumo por Hora:</label>
+                <input type="number" class="form-control" id="consumoPorHora" name="consumoPorHora" value="{{ generador.consumoPorHora }}" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="energiaGenerada">Energía Generada:</label>
+                <input type="number" class="form-control" id="energiaGenerada" name="energiaGenerada" value="{{ generador.energiaGenerada }}" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="uso">Uso del Generador:</label>
+                <input type="text" class="form-control" id="uso" name="uso" value="{{ generador.uso }}">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <a href="/generador" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    background-image: url('/static/eolicos.jpg'); /* Cambia a la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333333; /* Color de texto oscuro para contraste */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar el contenedor */
+}
+
+h1 {
+    color: #ff8c00; /* Naranja cálido para destacar */
+    text-shadow: 1px 1px #000000; /* Sombra negra para resaltar */
+}
+
+.alert {
+    background-color: #ffcccb; /* Fondo rojo claro */
+    color: #333333; /* Texto oscuro */
+    border: 1px solid #dc143c; /* Borde rojo carmesí */
+    border-radius: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #32cd32; /* Verde lima */
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Color gris para el botón de cancelar */
+    border: none;
+}
+
+.btn-success:hover, .btn-secondary:hover {
+    opacity: 0.9; /* Efecto de opacidad */
+    transform: scale(1.05); /* Animación de escala */
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control {
+    border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+}
+
+.input-group-text {
+    background-color: #ff4500; /* Fondo naranja */
+    color: white; /* Texto blanco */
+}

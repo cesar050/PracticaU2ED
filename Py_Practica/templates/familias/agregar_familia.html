@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Familia</title>
+    <link href="/static/image/gen.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"> <!-- Agregar Bootstrap Icons -->
+    <link rel="stylesheet" href="/static/css/agregar_familia.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-electricity">Agregar Nueva Familia</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert alert-danger" role="alert">
+                    {% for category, message in messages %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <form method="post" action="{{ url_for('route_familia.save_familia') }}">
+            <div class="form-group">
+                <label for="nombre"><i class="bi bi-person-fill"></i> Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="presupuesto"><i class="bi bi-wallet"></i> Presupuesto:</label>
+                <input type="number" class="form-control" id="presupuesto" name="presupuesto"  step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="tieneGenerador"><i class="bi bi-lightning-fill"></i> ¿Tiene Generador?</label>
+                <select class="form-control" id="tieneGenerador" name="tieneGenerador" required>
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="costoGenerador"><i class="bi bi-cash-stack"></i> Costo del Generador:</label>
+                <input type="number" class="form-control" id="costoGenerador" name="costoGenerador" placeholder="0.0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="consumoPorHora"><i class="bi bi-hourglass-split"></i> Consumo por Hora:</label>
+                <input type="number" class="form-control" id="consumoPorHora" name="consumoPorHora" placeholder="0.0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="energiaGenerada"><i class="bi bi-bolt"></i> Energía Generada:</label>
+                <input type="number" class="form-control" id="energiaGenerada" name="energiaGenerada" placeholder="0.0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="usoGenerador"><i class="bi bi-gear-fill"></i> Uso del Generador:</label>
+                <input type="text" class="form-control" id="usoGenerador" name="usoGenerador" required>
+            </div>
+            
+            <button class="btn btn-success" type="submit">Registrar</button>
+            <a href="/familia" class="btn btn-danger">Cancelar</a>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function(event) {
+                const presupuesto = parseFloat(document.getElementById("presupuesto").value);
+                const tieneGenerador = document.getElementById("tieneGenerador").value === "true";
+    
+                if (tieneGenerador && (isNaN(presupuesto) || presupuesto <= 0)) {
+                    event.preventDefault(); 
+                    alert("No se puede obtener un generador sin un presupuesto válido.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

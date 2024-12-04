@@ -1,0 +1,93 @@
+/* Variables de colores */
+:root {
+ /* Cambia a la ruta de tu imagen de fondo */
+    --text-color-dark: #333333; /* Color de texto oscuro */
+    --highlight-orange: #ff8c00; /* Naranja cálido */
+    --table-bg: rgba(255, 255, 255, 0.9); /* Fondo semitransparente para tablas */
+    --table-header-bg: #ff4500; /* Naranja rojizo oscuro */
+    --table-row-hover: #ffe4b5; /* Amarillo claro */
+    --btn-success-bg: #32cd32; /* Verde lima */
+    --btn-primary-bg: #1e90ff; /* Azul Dodger */
+    --btn-danger-bg: #dc143c; /* Rojo carmesí */
+    --alert-bg: #ffcccb; /* Fondo rojo claro */
+    --alert-border: #dc143c; /* Borde rojo carmesí*/
+}
+/* Estilos base */
+body {
+   /* background-image: url('/static/image/fondoF.avif'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color-dark);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezados destacados */
+h1.text-electricity {
+    color: var(--highlight-orange);
+    text-shadow: 2px 2px #000000; /* Sombra negra para resaltar */
+}
+
+/* Estilos de tabla */
+.table {
+    background-color: var(--table-bg);
+    color: var(--texbackground-t-color-dark);
+    border: 1px solid var(--highlight-orange);
+}
+
+.table thead {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+}
+
+.table tbody tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Botones */
+.btn-success {
+    background-color: var(--btn-success-bg);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    border: none;
+}
+
+.btn-danger {
+    background-color: var(--btn-danger-bg);
+    border: none;
+}
+
+.btn-success:hover,
+.btn-primary:hover,
+.btn-danger:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Alertas */
+.alert {
+    background-color: var(--alert-bg);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+    border: 1px solid var(--alert-border);
+}
+
+/* Tablas responsivas */
+.table-responsive {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones */
+.animate__animated.animate__fadeIn {
+    animation-duration: 1s;
+}
