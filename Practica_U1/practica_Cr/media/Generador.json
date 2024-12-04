@@ -1,0 +1,154 @@
+[
+    {
+        "id": "1",
+        "nombre": "Hyundai",
+        "precio": 4234.0,
+        "consumoPorHora": 23.0,
+        "energiaGenerada": 234.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "2",
+        "nombre": "Toyota",
+        "precio": 5120.0,
+        "consumoPorHora": 30.0,
+        "energiaGenerada": 400.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "3",
+        "nombre": "Hyundai",
+        "precio": 3200.0,
+        "consumoPorHora": 20.0,
+        "energiaGenerada": 150.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "4",
+        "nombre": "Toyota",
+        "precio": 220.0,
+        "consumoPorHora": 18.0,
+        "energiaGenerada": 120.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "5",
+        "nombre": "Westinghouse",
+        "precio": 470.0,
+        "consumoPorHora": 25.0,
+        "energiaGenerada": 310.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "6",
+        "nombre": "Toyota",
+        "precio": 300.0,
+        "consumoPorHora": 19.0,
+        "energiaGenerada": 200.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "7",
+        "nombre": "Toyota",
+        "precio": 180.0,
+        "consumoPorHora": 15.0,
+        "energiaGenerada": 80.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "8",
+        "nombre": "Toyota",
+        "precio": 4000.0,
+        "consumoPorHora": 22.0,
+        "energiaGenerada": 280.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "9",
+        "nombre": "Toyota",
+        "precio": 3500.0,
+        "consumoPorHora": 21.0,
+        "energiaGenerada": 190.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "10",
+        "nombre": "Westinghouse",
+        "precio": 6100.0,
+        "consumoPorHora": 40.0,
+        "energiaGenerada": 500.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "11",
+        "nombre": "Toyota",
+        "precio": 2000.0,
+        "consumoPorHora": 17.0,
+        "energiaGenerada": 140.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "12",
+        "nombre": "Toyota",
+        "precio": 3700.0,
+        "consumoPorHora": 23.0,
+        "energiaGenerada": 210.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "13",
+        "nombre": "Toyota",
+        "precio": 4900.0,
+        "consumoPorHora": 28.0,
+        "energiaGenerada": 320.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "14",
+        "nombre": "Toyota",
+        "precio": 2700.0,
+        "consumoPorHora": 18.5,
+        "energiaGenerada": 160.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "15",
+        "nombre": "Toyota",
+        "precio": 5300.0,
+        "consumoPorHora": 36.0,
+        "energiaGenerada": 470.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "16",
+        "nombre": "Yamaha",
+        "precio": 3000.0,
+        "consumoPorHora": 19.5,
+        "energiaGenerada": 200.0,
+        "uso": "Domestico"
+    },
+    {
+        "id": "17",
+        "nombre": "Yamaha",
+        "precio": 6000.0,
+        "consumoPorHora": 38.0,
+        "energiaGenerada": 480.0,
+        "uso": "Industrial"
+    },
+    {
+        "id": "18",
+        "nombre": "CAT",
+        "precio": 3500.0,
+        "consumoPorHora": 20.0,
+        "energiaGenerada": 180.0,
+        "uso": "Comercial"
+    },
+    {
+        "id": "19",
+        "nombre": "Toyota",
+        "precio": 4234.0,
+        "consumoPorHora": 23.0,
+        "energiaGenerada": 234.0,
+        "uso": "Domestico"
+    }
+]

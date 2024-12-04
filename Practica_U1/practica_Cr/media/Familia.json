@@ -1,0 +1,163 @@
+[
+    {
+        "id": 1,
+        "nombre": "Bustamante",
+        "tieneGenerador": true,
+        "presupuesto": 150.0,
+        "costoGenerador": 1200.0,
+        "consumoPorHora": 0.75,
+        "energiaGenerada": 500.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 2,
+        "nombre": "Laz",
+        "tieneGenerador": true,
+        "presupuesto": 1500.0,
+        "costoGenerador": 1250.0,
+        "consumoPorHora": 3.04,
+        "energiaGenerada": 150.04,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 3,
+        "nombre": "Ramos",
+        "tieneGenerador": false,
+        "presupuesto": 1500.0,
+        "costoGenerador": 1200.0,
+        "consumoPorHora": 12.75,
+        "energiaGenerada": 500.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 4,
+        "nombre": "Armijos",
+        "tieneGenerador": false,
+        "presupuesto": 1500.0,
+        "costoGenerador": 1200.0,
+        "consumoPorHora": 12.75,
+        "energiaGenerada": 500.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 5,
+        "nombre": "Segovia",
+        "tieneGenerador": false,
+        "presupuesto": 1500.0,
+        "costoGenerador": 1200.0,
+        "consumoPorHora": 12.75,
+        "energiaGenerada": 500.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 6,
+        "nombre": "Merchan ",
+        "tieneGenerador": false,
+        "presupuesto": 350.6,
+        "costoGenerador": 250.4,
+        "consumoPorHora": 4.6,
+        "energiaGenerada": 10.2,
+        "usoGenerador": "Educativo"
+    },
+    {
+        "id": 7,
+        "nombre": "X",
+        "tieneGenerador": true,
+        "presupuesto": 10000.01953125,
+        "costoGenerador": 503.1,
+        "consumoPorHora": 23.1,
+        "energiaGenerada": 56.3,
+        "usoGenerador": "Comercial"
+    },
+    {
+        "id": 8,
+        "nombre": "Hernández",
+        "tieneGenerador": true,
+        "presupuesto": 800.0,
+        "costoGenerador": 1000.0,
+        "consumoPorHora": 1.5,
+        "energiaGenerada": 400.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 9,
+        "nombre": "García",
+        "tieneGenerador": false,
+        "presupuesto": 2000.0,
+        "costoGenerador": 1500.0,
+        "consumoPorHora": 10.5,
+        "energiaGenerada": 600.0,
+        "usoGenerador": "Educativo"
+    },
+    {
+        "id": 10,
+        "nombre": "Martínez",
+        "tieneGenerador": true,
+        "presupuesto": 1200.0,
+        "costoGenerador": 800.0,
+        "consumoPorHora": 3.0,
+        "energiaGenerada": 200.0,
+        "usoGenerador": "Comercial"
+    },
+    {
+        "id": 11,
+        "nombre": "López",
+        "tieneGenerador": false,
+        "presupuesto": 1500.0,
+        "costoGenerador": 900.0,
+        "consumoPorHora": 7.5,
+        "energiaGenerada": 300.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 12,
+        "nombre": "González",
+        "tieneGenerador": true,
+        "presupuesto": 500.0,
+        "costoGenerador": 700.0,
+        "consumoPorHora": 2.5,
+        "energiaGenerada": 350.0,
+        "usoGenerador": "Comercial"
+    },
+    {
+        "id": 13,
+        "nombre": "Pérez",
+        "tieneGenerador": false,
+        "presupuesto": 1800.0,
+        "costoGenerador": 1300.0,
+        "consumoPorHora": 6.0,
+        "energiaGenerada": 550.0,
+        "usoGenerador": "Educativo"
+    },
+    {
+        "id": 14,
+        "nombre": "Rodríguez",
+        "tieneGenerador": true,
+        "presupuesto": 1000.0,
+        "costoGenerador": 600.0,
+        "consumoPorHora": 2.0,
+        "energiaGenerada": 450.0,
+        "usoGenerador": "Personal"
+    },
+    {
+        "id": 15,
+        "nombre": "Sánchez",
+        "tieneGenerador": false,
+        "presupuesto": 2500.0,
+        "costoGenerador": 2000.0,
+        "consumoPorHora": 8.0,
+        "energiaGenerada": 700.0,
+        "usoGenerador": "Comercial"
+    },
+    {
+        "id": 16,
+        "nombre": "Ramírez",
+        "tieneGenerador": true,
+        "presupuesto": 900.0,
+        "costoGenerador": 500.0,
+        "consumoPorHora": 1.8,
+        "energiaGenerada": 380.0,
+        "usoGenerador": "Educativo"
+    }
+    
+]
